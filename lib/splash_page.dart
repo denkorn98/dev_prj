@@ -31,8 +31,8 @@ class _SplashPageState extends State<SplashPage> {
 
     return Center(
       child: Container(
-        // child: Image.asset('assets/splash.png', fit: BoxFit.fill),
-        child: CircularProgressIndicator(),
+        child: Image.asset('assets/splash.png', fit: BoxFit.fill),
+        // child: CircularProgressIndicator(),
       ),
     );
   }
