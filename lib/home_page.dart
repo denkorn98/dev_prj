@@ -6,6 +6,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final List<String> itemsList = ['weather','email','music'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +16,19 @@ class _HomePageState extends State<HomePage> {
         title: Text('Home'),
         centerTitle: true,
       ),
-      body: Container(),
+      body: Container(
+        child: ListView.builder(
+          itemCount: itemsList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+                child: Column(children: <Widget>[
+                  Text(index.toString()),
+                  Text(itemsList[index]),
+                ],),
+             );
+          }
+        ),
+      )
     );
   }
 }
