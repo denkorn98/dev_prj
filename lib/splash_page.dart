@@ -1,3 +1,4 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/services.dart';
@@ -31,8 +32,14 @@ class _SplashPageState extends State<SplashPage> {
 
     return Center(
       child: Container(
-        child: Image.asset('assets/splash.png', fit: BoxFit.fill),
-        // child: CircularProgressIndicator(),
+        decoration: BoxDecoration(
+          color: Colors.black87,
+        ),
+        child: FlareActor(
+          "assets/file1.flr",
+          animation: "Untitled",
+          color: Colors.blue,
+        ),
       ),
     );
   }
